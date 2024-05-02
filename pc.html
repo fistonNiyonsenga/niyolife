@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <span style="--i:1;"><img src="1.jpg" width="200" ></span>
+            <span style="--i:2;"><img src="2.jpg" width="200" ></span>
+            <span style="--i:3;"><img src="3.jpg" width="200" ></span>
+            <span style="--i:4;"><img src="4.jpg" width="200" ></span>
+            <span style="--i:5;"><img src="5.jpg" width="200" ></span>
+            <span style="--i:6;"><img src="6.jpg" width="200" ></span>
+            <span style="--i:7;"><img src="7.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="8.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="9.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="10.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="11.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="12.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="13.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="15.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="16.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="17.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="18.jpg" width="200" ></span>
+            <span style="--i:8;"><img src="19.jpg" width="200" ></span>
+        </div>
+        <div class="btns">
+            <div class="btn prev"></div>
+            <div class="btn next"></div>
+        </div>
+    </div>
+    <script>
+        let prev =document.querySelector('.prev');
+        let next =document.querySelector('.next');
+        let box =document.querySelector('.box');
+ 
+        let degrees = 0;
+
+        prev.addEventListener('click', function(){
+            degrees += 45;
+            box.style = `transform: perspective(1000px) rotateY(${degrees}deg)`; 
+
+        })
+        next.addEventListener('click', function(){
+            degrees -= 45;
+            box.style = `transform: perspective(1000px) rotateY(${degrees}deg)`; 
+
+        })
+    </script>
+</body>
+</html>
